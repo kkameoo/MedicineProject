@@ -44,6 +44,6 @@ public class drug {
 //            e.printStackTrace();
 //        }
         DrugDAO drugDAO = new DrugDAO();
-        drugDAO.drugInsert();
+        drugDAO.drugInsert("4");
     }
 }

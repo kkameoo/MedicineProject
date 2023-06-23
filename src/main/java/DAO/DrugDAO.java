@@ -44,13 +44,17 @@ public class DrugDAO {
         return connection;
     }
 
-    public ArrayList<DrugDTO> drugInsert() throws IOException {
+    public ArrayList<DrugDTO> drugInsert(String pageNo) throws IOException {
+
+
+
+        int No = Integer.parseInt(pageNo);
 
         ArrayList<DrugDTO> DrugList = new ArrayList<DrugDTO>();
 
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1471000/DayMaxDosgQyByIngdService/getDayMaxDosgQyByIngdInq"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=G8s%2BoJ2yZ31khu9wTLk9vXE4UBvjwqnwo7KpCXfhXrWPwMGR2E75QD7PwZTS1PIMa%2BW6cdlx8bRWKoAKMEvZdw%3D%3D"); /*Service Key*/
-        urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
+        urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode(""+No+"", "UTF-8")); /*페이지번호*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("3", "UTF-8")); /*한 페이지 결과 수*/
         urlBuilder.append("&" + URLEncoder.encode("type","UTF-8") + "=" + URLEncoder.encode("xml", "UTF-8")); /*응답데이터 형식(xml/json) Default: xml*/
         urlBuilder.append("&" + URLEncoder.encode("CPNT_CD","UTF-8") + "=" + URLEncoder.encode("", "UTF-8")); /*성분코드*/

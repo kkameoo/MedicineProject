@@ -1,0 +1,136 @@
+.header{
+    width:95%;
+}
+.header_upper {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.header_upper_item {
+    margin-left: auto;
+    display: inline-block;
+    margin-left:20px;
+}
+.header_upper_item a {
+    text-decoration: none;
+    color: gray;
+}
+.header_upper_item a:hover {
+    color: #353535;
+}
+.header_center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+}
+
+.logo {
+    align-self: flex-start;
+    width:140px;
+    height:70px;
+    margin-left: 20px;
+    opacity: 0.8;
+}
+
+.header_center_list {
+    display: flex;
+        align-items: center;
+}
+
+.header_center_item {
+    margin-right: 0;
+    display: inline-block;
+    margin-left:20px;
+    text-decoration: none;
+}
+.header_center_item a {
+    text-decoration: none;
+    color:#000;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_center_item a:hover{
+    font-weight:800;
+}
+
+.hr {
+    border-radius: 1px #000;
+}
+
+
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    align-items: center;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  td:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+  
+  td:hover {
+    background-color: #eaeaea;
+    transition: background-color 0.3s ease;
+  }
+
+
+
+.board_page {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_page a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-left: 0;
+    line-height: 100%;
+    
+}
+
+.board_page a.bt {
+    padding-top: 10px;
+    font-size: 0.7rem;
+    letter-spacing: -1px;
+}
+
+.board_page a.num {
+    padding-top: 9px;
+    font-size: 1rem;
+}
+
+.board_page a.num.on {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+.board_page a:first-child {
+    border-left: 1px solid #ddd;
+}
+  
